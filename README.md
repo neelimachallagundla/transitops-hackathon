@@ -1,19 +1,42 @@
-# transitops-hackathon
-Smart Transport Operations Platform
+# 🚀 TransitOps – Smart Transportation Management System
 
-# React + Vite
+## 📌 Overview
+TransitOps is an intelligent transportation management system designed to optimize transit operations, improve efficiency, and provide real-time insights. Built during a hackathon, the solution focuses on solving real-world transportation challenges using modern web technologies.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 🎯 Problem Statement
+Transportation systems often suffer from inefficiencies such as poor route planning, lack of real-time tracking, delays, and mismanagement of resources. There is a need for a centralized system that can monitor, optimize, and manage transit operations effectively.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 💡 Our Solution
+TransitOps provides a smart platform that:
+- 📍 Tracks vehicles in real-time
+- 🧭 Optimizes routes for efficiency
+- 📊 Displays actionable insights through dashboards
+- ⚡ Improves operational decision-making
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🌐 Frontend
+- React (Vite)
+- CSS / Tailwind CSS
+
+### 🔧 Backend
+- Node.js
+- Express.js
+
+### 🗄️ Database
+- MongoDB
+
+### ⚙️ Tools & Platforms
+- Git & GitHub
+- Postman
+- VS Code
+
+---
+
+## 📂 Project Structure
