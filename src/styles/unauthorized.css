@@ -1,0 +1,44 @@
+.unauthorized-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#f4f6f9;
+}
+
+.unauthorized-card{
+    background:white;
+    padding:50px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.unauthorized-card h1{
+    font-size:80px;
+    color:#ff4d4f;
+    margin-bottom:10px;
+}
+
+.unauthorized-card h2{
+    margin-bottom:15px;
+}
+
+.unauthorized-card p{
+    color:#666;
+    margin-bottom:25px;
+}
+
+.unauthorized-card button{
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.unauthorized-card button:hover{
+    background:#1d4ed8;
+}

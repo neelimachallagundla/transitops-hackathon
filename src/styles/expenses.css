@@ -1,0 +1,172 @@
+.expenses-page{
+
+    padding:20px;
+
+}
+
+
+
+.page-header{
+
+    margin-bottom:25px;
+
+}
+
+
+
+.page-header p{
+
+    color:#666;
+
+}
+
+
+
+.expenses-layout{
+
+    display:grid;
+
+    grid-template-columns:350px 1fr;
+
+    gap:25px;
+
+}
+
+
+
+.expense-form-card,
+.expense-table-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+}
+
+
+
+.expense-form-card h2,
+.expense-table-card h2{
+
+    margin-bottom:20px;
+
+}
+
+
+
+.expense-form-card form{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+.expense-form-card label{
+
+    font-weight:600;
+
+    margin-bottom:6px;
+
+}
+
+
+
+.expense-form-card input,
+.expense-form-card select{
+
+
+    padding:11px;
+
+    margin-bottom:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+}
+
+
+
+.expense-form-card button{
+
+    padding:12px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+
+th,
+td{
+
+    padding:12px;
+
+    border-bottom:1px solid #eee;
+
+    text-align:left;
+
+}
+
+
+
+.expense-status{
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+}
+
+
+
+.delete-btn{
+
+    background:#dc2626;
+
+    color:white;
+
+    border:none;
+
+    padding:7px 12px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+}
+
+
+
+@media(max-width:900px){
+
+    .expenses-layout{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

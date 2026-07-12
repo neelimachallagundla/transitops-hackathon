@@ -1,29 +1,26 @@
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
-import "../styles/Layout.css";
+
+import "../styles/layout.css";
 
 export default function Layout({ children }) {
+  return (
+    <div className="layout">
 
-    return (
+      <Sidebar />
 
-        <div className="layout">
+      <div className="main">
 
-            <Sidebar />
+        <Navbar />
 
-            <div className="main">
+        <main className="content">
 
-                <Navbar />
+          {children}
 
-                <div className="content">
+        </main>
 
-                    {children}
+      </div>
 
-                </div>
-
-            </div>
-
-        </div>
-
-    );
-
+    </div>
+  );
 }

@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../auth/AuthContext";
 import "../styles/login.css";
 
 export default function Login() {
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const [user, setUser] = useState({
     email: "",
     password: "",
-    role: "Fleet Manager",
+    role: "fleet_manager",
   });
 
   const handleChange = (e) => {
@@ -19,19 +21,78 @@ export default function Login() {
   };
 
   const handleLogin = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (user.email === "" || user.password === "") {
-      alert("Please fill all fields");
-      return;
-    }
+  if (!user.email || !user.password) {
+    alert("Please fill all fields");
+    return;
+  }
 
-    navigate("/dashboard");
-  };
+  // Demo accounts
+  const demoUsers = [
+    {
+      email: "fleet@transitops.com",
+      password: "1234",
+      role: "fleet_manager",
+    },
+    {
+      email: "driver@transitops.com",
+      password: "1234",
+      role: "driver",
+    },
+    {
+      email: "maintenance@transitops.com",
+      password: "1234",
+      role: "maintenance",
+    },
+    {
+      email: "admin@transitops.com",
+      password: "1234",
+      role: "admin",
+    },
+  ];
+
+  // Validate user
+  const matchedUser = demoUsers.find(
+    (demoUser) =>
+      demoUser.email === user.email &&
+      demoUser.password === user.password &&
+      demoUser.role === user.role
+  );
+
+  if (!matchedUser) {
+    alert("Invalid email, password, or selected role.");
+    return;
+  }
+
+  // Save authenticated user
+  login({
+    email: matchedUser.email,
+    role: matchedUser.role,
+  });
+
+  // Navigate based on role
+  switch (matchedUser.role) {
+    case "fleet_manager":
+    case "admin":
+      navigate("/dashboard");
+      break;
+
+    case "driver":
+      navigate("/trips");
+      break;
+
+    case "maintenance":
+      navigate("/maintenance");
+      break;
+
+    default:
+      navigate("/");
+  }
+};
 
   return (
     <div className="login-container">
-
       <div className="login-card">
 
         <h1>🚚 TransitOps</h1>
@@ -61,10 +122,10 @@ export default function Login() {
             value={user.role}
             onChange={handleChange}
           >
-            <option>Fleet Manager</option>
-            <option>Dispatcher</option>
-            <option>Safety Officer</option>
-            <option>Financial Analyst</option>
+            <option value="fleet_manager">Fleet Manager</option>
+            <option value="driver">Driver</option>
+            <option value="maintenance">Maintenance Staff</option>
+            <option value="admin">Admin</option>
           </select>
 
           <button type="submit">
@@ -74,7 +135,6 @@ export default function Login() {
         </form>
 
       </div>
-
     </div>
   );
 }

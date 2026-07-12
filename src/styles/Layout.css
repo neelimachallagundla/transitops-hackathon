@@ -1,23 +1,35 @@
-.layout{
+.layout {
 
-display:flex;
+    display: flex;
 
-}
+    min-height: 100vh;
 
-.main{
-
-margin-left:250px;
-
-width:calc(100% - 250px);
-
-background:#f3f6fb;
-
-min-height:100vh;
+    overflow-x: hidden;
 
 }
 
-.content{
 
-padding:30px;
+
+.main {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+}
+
+
+
+.content {
+
+    padding: 30px;
+
+    flex: 1;
+
+    overflow-x: auto;
 
 }
