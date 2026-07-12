@@ -1,12 +1,12 @@
 import Layout from "../components/Layout";
 
-export default function Reports(){
+export default function Expenses(){
 
 return(
 
 <Layout>
 
-<h1>Reports</h1>
+<h1>Expenses</h1>
 
 </Layout>
 
